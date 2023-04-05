@@ -16,6 +16,7 @@
 # limitations under the License.
 ###############################################################################
 CURR_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+echo "currdir $CURR_DIR"
 source "${CURR_DIR}/docker_base.sh"
 
 CACHE_ROOT_DIR="${APOLLO_ROOT_DIR}/.cache"

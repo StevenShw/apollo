@@ -248,6 +248,9 @@ function run_bazel_build() {
   info "${TAB}Disabled:      ${YELLOW}${disabled_targets}${NO_COLOR}"
 
   local job_args="--copt=-mavx2 --host_copt=-mavx2 --jobs=$(nproc) --local_ram_resources=HOST_RAM*0.7"
+  info "========================"
+  info "${formatted_targets}"
+  info "-----------------------"
   bazel build ${CMDLINE_OPTIONS} ${job_args} -- ${formatted_targets}
 }
 
